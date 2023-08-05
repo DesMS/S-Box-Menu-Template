@@ -1,0 +1,23 @@
+@using Sandbox;
+@using System.Linq;
+@using System.Threading.Tasks;
+@using Sandbox.Menu;
+@using Sandbox.UI;
+
+<root>
+    <div class="game-title">
+        @Game.Menu.Package.Title
+    </div>
+
+    <div class="controls">
+        <a class="button" href="/">Return</a>
+    </div>
+</root>
+
+@code
+{
+    void LeaveGame()
+    {
+        Game.Menu.LeaveServer( "Leaving" );
+    }
+}

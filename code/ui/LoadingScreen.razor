@@ -1,0 +1,25 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.Menu;
+
+@inherits RootPanel
+@implements Sandbox.Menu.ILoadingScreenPanel
+@attribute [StyleSheet]
+
+<root>
+
+    <div>Loading!</div>
+    <div>@Progress.Title</div>
+
+</root>
+
+@code
+{
+    public LoadingProgress Progress;
+
+    public void OnLoadingProgress( LoadingProgress progress )
+    {
+        Progress = progress;
+        StateHasChanged();
+    }
+}
